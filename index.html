@@ -1,274 +1,59 @@
-<!DOCTYPE HTML>
-<!-- Parallelism by HTML5 UP (modified for WeSlay) -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeSlay Hub – Detroit Underground Collective</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-  <!-- Small aesthetic overrides: rounded corners, hover lift, shadows -->
-  <style>
-    /* Keep changes minimal and template-friendly */
-    .item.intro { border-radius: 12px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
-    .item .image, .item > a > img, .item.thumb { border-radius: 10px; overflow: hidden; display: block; }
-    .item img { display:block; width:100%; height:auto; transition: transform .35s ease, box-shadow .35s ease; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
-    .item:hover img { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 40px rgba(0,0,0,0.32); }
-    .item.thumb { padding: 10px; background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01)); }
-    .item h2 { margin: 0 0 8px 0; font-size: 1rem; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
-
-    /* === WeSlay: force thumbnail images to fill the card and be rounded rectangles === */
-
-/* Make the anchor wrapper behave as the image container (full width/height) */
-.items .item.thumb > a,
-.items .item.thumb > a.image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px; /* rounded rectangle */
-  padding: 0;          /* remove internal padding that shrinks image */
-  background: transparent;
-}
-
-/* Ensure the image covers the container area (nice crop) and is never tiny */
-.items .item.thumb img,
-.items .item .image img,
-.item > a > img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 120px;           /* ensures a visible thumbnail height; tweak as needed */
-  object-fit: cover !important;/* crop to fill the box */
-  border-radius: 12px !important;
-}
-
-/* If some rule is forcing a circle, this override resets it */
-.items .item.thumb img {
-  border-radius: 12px !important;
-  max-width: 100% !important;
-  box-sizing: border-box;
-}
-
-/* Reduce hover transform on mobile and ensure smoothness */
-@media (max-width: 768px) {
-  .items .item.thumb img { transform: none !important; height: auto !important; }
-}
-
-/* Optional: give a fixed aspect ratio so thumbnails align consistently */
-.items .item.thumb .image,
-.items .item.thumb > a {
-  aspect-ratio: 16 / 9; /* or 1/1 for square cards — change to taste */
-}
-
-
-    /* external badge (small) */
-    a[data-external="true"]::after { content:"↗"; position:absolute; right:10px; top:8px; background:rgba(0,0,0,0.45); color:#fff; padding:2px 6px; border-radius:8px; font-size:11px; }
-
-    @media (max-width:768px) {
-      .item .image, .item.intro, .item.thumb { border-radius:8px; }
-      .item:hover img { transform:none; box-shadow:none; }
-    }
-
-    /* ensure anchor wrappers that are direct children of .item get position relative for badge */
-    .item > a { position: relative; display: block; }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="is-preload">
+<body>
 
-  <!-- Wrapper -->
-  <div id="wrapper">
+  <!-- Header -->
+  <header>
+    <h1>WeSlay Hub</h1>
+    <p>Detroit Underground Collective – Music, Artists & Promo</p>
+  </header>
 
-    <!-- Main -->
-    <section id="main">
+  <!-- Main Links Section -->
+  <main>
 
-      <!-- Items -->
-      <div class="items">
-
-        <div class="item intro span-2">
-          <h1>WeSlay</h1>
-          <p>Detroit Underground Collective – Music, Artists & Promo</p>
-        </div>
-
-        <article class="item thumb span-1">
-          <h2>been hittin - bkd365 ft. prada4our</h2>
-          <!-- external link (SoundCloud) - opens in new tab -->
-          <a href="https://soundcloud.com/realasl/ompolompa?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" data-external="true">
-            <img src="images/thumbs/beenhitting.jpg" alt="been hittin' cover">
-          </a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>VibeNSound</h2>
-          <!-- keep poptrox lightbox for full-size image links -->
-          <a href="https://www.instagram.com/vibensound/"><img src="images/thumbs/vibensound.png" alt="VibeNSound"></a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>BKD365 Instagram</h2>
-          <!-- fixed missing-quotes href, external -->
-          <a href="https://www.instagram.com/bkd365_/" data-external="true">
-            <img src="images/thumbs/bkdlog.png" alt="BKD365 Instagram">
-          </a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>WeSlay Instagram</h2>
-          <a href="https://www.instagram.com/yyeslay"><img src="images/thumbs/weslayconcrete.png" alt="WeSlay Instagram"></a>
-        </article>
-
-        <article class="item thumb span-3">
-          <h2>Discord Community</h2>
-          <!-- external -->
-          <a href="https://discord.gg/cYJ4CAQSkYe" data-external="true">
-            <img src="images/thumbs/05.png" alt="Join our Discord">
-          </a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>Coming Soon</h2>
-          <a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="The Pursuit"></a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>DM @bkd365_ on IG to be featured</h2>
-          <a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt="Boundless"></a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>Coming Soon</h2>
-          <a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="The Spectators"></a>
-        </article>
-
-      </div>
-      <!-- /Items -->
-
-      <!-- ===== Second row: placeholder Song — Artist cards (replace LINK and IMAGE filenames) ===== -->
-      <div class="items">
-
-        <article class="item thumb span-3">
-          <h2>Discord Community</h2>
-          <a href="https://discord.gg/cYJ4CAQSkYe" data-external="true">
-            <img src="images/thumbs/05.png" alt="Discord">
-          </a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>Producer - Domira</h2>
-          <a href="https://guns.lol/domira" data-external="true">
-            <img src="images/thumbs/domira.jpg" alt="Domira">
-          </a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>Artist - GYN4oe</h2>
-          <a href="https://music.apple.com/us/artist/gyn4oe/1801129391" data-external="true">
-            <img src="images/thumbs/bj.jpg" alt="GYN4oe">
-          </a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>DM @bkd365_ on IG to be featured</h2>
-          <!-- if you want this to open full-size image in lightbox, change href to images/fulls/xx.jpg and keep class="image" -->
-          <a href="https://soundcloud.com/artisttwo/songname" data-external="true">
-            <img src="images/thumbs/placeholder-04.jpg" alt="In Progress">
-          </a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>BKD365 TikTok</h2>
-          <a href="https://www.tiktok.com/@bkd365" data-external="true">
-            <img src="images/thumbs/bkdlog.png" alt="BKD tiktok">
-          </a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>Coming Soon</h2>
-          <a href="https://soundcloud.com/collective/ep-link" data-external="true">
-            <img src="images/thumbs/placeholder-06.jpg" alt="In Progress">
-          </a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>Coming Soon</h2>
-          <a href="https://youtu.be/REPLACE_SHORT_ID" data-external="true">
-            <img src="images/thumbs/placeholder-07.jpg" alt="In Progress">
-          </a>
-        </article>
-
-        <article class="item thumb span-2">
-          <h2>Coming Soon</h2>
-          <a href="https://soundcloud.com/guest/freestyle" data-external="true">
-            <img src="images/thumbs/placeholder-08.jpg" alt="In Progress">
-          </a>
-        </article>
-
-        <article class="item thumb span-1">
-          <h2>Coming Soon</h2>
-          <a href="https://open.spotify.com/track/REPLACE_TRACK_ID_3" data-external="true">
-            <img src="images/thumbs/placeholder-09.jpg" alt="In Progress">
-          </a>
-        </article>
-
-      </div>
-      <!-- ===== end second row ===== -->
-
-      <!-- /Items -->
-
-    </section>
-    <!-- /Main -->
-
-    <section id="about">
-      <h2>About WeSlay</h2>
-      <p>WeSlay is a Detroit underground rap collective uniting artists, producers, and fans under one hub. "We Are One"</p>
+    <section>
+      <h2>Featured Music</h2>
+      <ul>
+        <li><a href="https://soundcloud.com/realasl/ompolompa?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer">been hittin - bkd365 ft. prada4our (SoundCloud)</a></li>
+        <li><a href="https://soundcloud.com/artisttwo/songname" target="_blank" rel="noopener noreferrer">In Progress (SoundCloud)</a></li>
+        <li><a href="https://soundcloud.com/collective/ep-link" target="_blank" rel="noopener noreferrer">Coming Soon EP (SoundCloud)</a></li>
+        <li><a href="https://soundcloud.com/guest/freestyle" target="_blank" rel="noopener noreferrer">Freestyle (SoundCloud)</a></li>
+        <li><a href="https://music.apple.com/us/artist/gyn4oe/1801129391" target="_blank" rel="noopener noreferrer">GYN4oe (Apple Music)</a></li>
+        <li><a href="https://open.spotify.com/track/REPLACE_TRACK_ID_3" target="_blank" rel="noopener noreferrer">Coming Soon Track (Spotify)</a></li>
+        <li><a href="https://youtu.be/REPLACE_SHORT_ID" target="_blank" rel="noopener noreferrer">Coming Soon Video (YouTube)</a></li>
+      </ul>
     </section>
 
-    <section id="music">
-      <h2>Featured Track</h2>
-      <!-- correct SoundCloud embed player URL -->
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/realasl/ompolompa&color=%23000000">
-      </iframe>
+    <section>
+      <h2>Social & Community</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/vibensound/" target="_blank" rel="noopener noreferrer">VibeNSound (Instagram)</a></li>
+        <li><a href="https://www.instagram.com/bkd365_/" target="_blank" rel="noopener noreferrer">BKD365 Instagram</a></li>
+        <li><a href="https://www.instagram.com/yyeslay" target="_blank" rel="noopener noreferrer">WeSlay Instagram</a></li>
+        <li><a href="https://discord.gg/cYJ4CAQSkYe" target="_blank" rel="noopener noreferrer">Discord Community</a></li>
+        <li><a href="https://www.tiktok.com/@bkd365" target="_blank" rel="noopener noreferrer">BKD365 TikTok</a></li>
+      </ul>
     </section>
 
-    <!-- Footer -->
-    <section id="footer">
-      <section>
-        <p>This is <strong>We Slay Hub</strong>, a community-driven platform for music & promo.</p>
-      </section>
-      <section>
-        <ul class="icons">
-          <li><a href="https://twitter.com/WeSlay" class="icon brands fa-twitter" target="_blank" rel="noopener noreferrer"><span class="label">Twitter</span></a></li>
-          <li><a href="https://instagram.com/yyeslay" class="icon brands fa-instagram" target="_blank" rel="noopener noreferrer"><span class="label">Instagram</span></a></li>
-          <li><a href="https://discord.gg/cYJ4CAQSkYe" class="icon brands fa-discord" target="_blank" rel="noopener noreferrer"><span class="label">Discord</span></a></li>
-          <li><a href="mailto:YearOneFirm@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; 2025 WeSlay Collective</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </section>
-    </section>
-    <!-- /Footer -->
+  </main>
 
-  </div>
-  <!-- /Wrapper -->
+  <!-- Footer -->
+  <footer>
+    <h2>Connect with Us</h2>
+    <ul class="social-icons">
+      <li><a href="https://twitter.com/WeSlay" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+      <li><a href="https://instagram.com/yyeslay" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://discord.gg/cYJ4CAQSkYe" target="_blank" rel="noopener noreferrer">Discord</a></li>
+      <li><a href="mailto:YearOneFirm@gmail.com">Email</a></li>
+    </ul>
+    <p>&copy; 2025 WeSlay Collective</p>
+  </footer>
 
-  <!-- Scripts (keep template order) -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.poptrox.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
-  <!-- Defensive script: ensure external links open in new tab and are not hijacked by poptrox -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // find anchors that look external (http(s)) and are NOT direct image file links
-      var all = document.querySelectorAll('a[href]');
-      all.forEach(function (a) {
-        var href = a.getAttribute('href');
-        if (!href) return;
-        var isHttp
+</body>
+</html>
